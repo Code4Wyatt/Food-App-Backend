@@ -14,11 +14,21 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Fruit.init({
-    name: DataTypes.STRING,
-    category: DataTypes.STRING,
-    calories: DataTypes.INTEGER
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    calories: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   }, {
     sequelize,
+    tableName: 'fruit',
     modelName: 'Fruit',
   });
   return Fruit;
