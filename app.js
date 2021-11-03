@@ -23,6 +23,3 @@ app.listen({ port: 5001 }, async () => {
     console.log('Database synced!');
 })
    
-
-
-main()
